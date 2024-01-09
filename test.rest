@@ -1,0 +1,4 @@
+POST https://llama-chatpdf-gamma.vercel.app/api/chat
+content-type: application/json
+
+{ "messages": [{ "role": "user", "content": "What is VBA" }] }
