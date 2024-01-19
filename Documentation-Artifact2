@@ -1,0 +1,63 @@
+ClaimChat uses the Retrieval Augmented Generation (RAG) capabilities of LlamaIndex to answer questions about SEC 10-K & 10-Q documents.
+
+You can start using the application now at secinsights.ai
+
+You can also check out our End-to-End tutorial guide on YouTube for this project! This video covers product features, system architecture, development environment setup, and how to use this application with your own custom documents (beyond just SEC filings!). The video has chapters so you can skip to the section most relevant to you.
+
+Why did we make this? 🤔
+As RAG applications look to move increasingly from prototype to production, we thought our developer community would find value in having a complete example of a working real-world RAG application.
+
+SEC Insights works as well locally as it does in the cloud. It also comes with many product features that will be immediately applicable to most RAG applications.
+
+Use this repository as a reference when building out your own RAG application or fork it entirely to start your project off with a solid foundation.
+
+Product Features 😎
+Chat-based Document Q&A against a pool of documents
+Citation of source data that LLM response was based on
+PDF Viewer with highlighting of citations
+Use of API-based tools (polygon.io) for answering quantitative questions
+Token-level streaming of LLM responses via Server-Sent Events
+Streaming of Reasoning Steps (Sub-Questions) within Chat
+Development Features 🤓
+Infrastructure-as-code for deploying directly to Vercel & Render
+Continuous deployments provided by Vercel & Render.com. Shipping changes is as easy as merging into your main branch.
+Production & Preview environments for both Frontend & Backend deployments! Easily try your changes before release.
+Robust local environment setup making use of LocalStack & Docker compose
+Monitoring & Profiling provided by Sentry
+Load Testing provided by Loader.io
+Variety of python scripts for REPL-based chat & data management
+Tech Stack ⚒️
+Frontend
+React / Next.js
+Tailwind CSS
+Backend
+FastAPI
+Docker
+SQLAlchemy
+OpenAI (gpt-3.5-turbo + text-embedding-ada-002)
+PGVector
+LlamaIndex 🦙
+Infrastructure
+Render.com
+Backend hosting
+Postgres 15
+Vercel
+Frontend Hosting
+AWS
+Cloudfront
+S3
+System Architecture
+System Architecture
+
+Usage 💻
+See README.md files in frontend/ & backend/ folders for individual setup instructions for each. As mentioned above, we also have a YouTube tutorial here that covers how to setup this project's development environment.
+
+We've also included a config for a GitHub Codespace in .devcontainer/devcontainer.json. If you choose to use GitHub Codespaces, your codespace will come pre-configured with a lot of the libraries and system dependencies that are needed to run this project. This is probably the fastest way to get this project up and running! Having said that, developers have successfully set-up this project in Linux, macOS, and Windows environments!
+
+If you have any questions when trying to run this project, you may find your answer quickly by reviewing our FAQ or by searching through our GitHub issues! If you don't see a satisfactory answer to your question, feel free to open a GitHub issue so we may assist you!
+
+We also have a dedicated #sec-insights channel on our Discord where we may be able to assist with smaller issues more instantaneously.
+
+Caveats 🧐
+The frontend currently doesn't support Mobile
+Our main goal with this project is to provide a solid foundation for full-stack RAG apps. There is still room for improvement in terms of RAG performance!
